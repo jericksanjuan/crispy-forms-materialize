@@ -22,8 +22,7 @@ Links
 Requires
 ========
 
-* `django-crispy-forms`_ = 1.4.x;
-* `django-materialize-css`_ = 1.4.x;
+* `django-crispy-forms`_ = 1.5.x;
 
 Installation
 ============
@@ -46,5 +45,6 @@ Then append this part to specify usage of the Materialize set :
 
     # Default layout to use with "crispy_forms"
     CRISPY_TEMPLATE_PACK = 'materialize'
+    CRISPY_ALLOWED_TEMPLATE_PACKS = ('bootstrap', 'uni_form', 'bootstrap3', 'materialize')
 
 All other `django-crispy-forms`_ settings option apply, see its documentation for more details.
