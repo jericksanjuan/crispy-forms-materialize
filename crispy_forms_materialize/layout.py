@@ -11,7 +11,7 @@ from crispy_forms import layout as crispy_forms_layout
 
 TEMPLATE_PACK = getattr(settings,
                         'CRISPY_TEMPLATE_PACK',
-                        'materialize_css_forms')
+                        'materialize')
 
 
 class Layout(crispy_forms_layout.Layout):

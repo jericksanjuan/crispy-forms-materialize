@@ -2,7 +2,7 @@
 .. _Django: https://www.djangoproject.com/
 .. _django-materialize-css: https://pypi.python.org/pypi/django-materialize-css/
 .. _django-crispy-forms: https://github.com/maraujop/django-crispy-forms
-.. _Materialize: http://materializecss.com 
+.. _Materialize: http://materializecss.com
 
 Introduction
 ============
@@ -45,6 +45,6 @@ Then append this part to specify usage of the Materialize set :
 .. sourcecode:: python
 
     # Default layout to use with "crispy_forms"
-    CRISPY_TEMPLATE_PACK = 'materialize_css_forms'
+    CRISPY_TEMPLATE_PACK = 'materialize'
 
 All other `django-crispy-forms`_ settings option apply, see its documentation for more details.

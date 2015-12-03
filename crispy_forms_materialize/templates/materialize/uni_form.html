@@ -1,5 +1,5 @@
 {% if form_show_errors %}
-    {% include "materialize_css_forms/errors.html" %}
+    {% include "materialize/errors.html" %}
 {% endif %}
 
 {% if form_style == "" or form_style %}
@@ -11,7 +11,7 @@
 
         {% cycle '<div class="row">' '' %}
 
-            {% include "materialize_css_forms/field.html" %}
+            {% include "materialize/field.html" %}
 
         {% cycle '' '</div>' %}
 
