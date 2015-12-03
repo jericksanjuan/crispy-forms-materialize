@@ -84,7 +84,7 @@ class Column(Div):
 
     .. sourcecode:: html
 
-        <div class"col s6">...</div>
+        <div class"col s12">...</div>
 
     ``col`` class is always appended, so you don't need to specify it.
 
