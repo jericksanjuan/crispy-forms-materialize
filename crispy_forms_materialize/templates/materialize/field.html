@@ -25,16 +25,12 @@
           </label>
         {% endif %}
 
-        {% if field|is_textarea %}
-          {% include 'materialize/layout/textarea.html' %}
-        {% endif %}
-
         {% if field|is_checkboxselectmultiple %}
-            {% include 'materialize/layout/checkboxselectmultiple.html' %}
+          {% include 'materialize/layout/checkboxselectmultiple.html' %}
         {% endif %}
 
-        {% if not field|is_checkbox and not field|is_checkboxselectmultiple and not field|is_textarea and not field|is_file %}
-            {% crispy_field field %}
+        {% if not field|is_checkbox and not field|is_checkboxselectmultiple and not field|is_file %}
+          {% crispy_field field %}
         {% endif %}
 
         {% if form_show_errors %}
