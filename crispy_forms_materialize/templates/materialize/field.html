@@ -15,22 +15,19 @@
               <input class="file-path validate" type="text">
             </div>
           </div>
-        {% elif field.label %}
-          {% if field|is_checkbox %}
-              {% crispy_field field %}
-          {% endif %}
-
-          <label for="{{ field.id_for_label }}" {% if field.field.required %}class="required"{% endif %}>
-              {{ field.label|safe }}{% if field.field.required %}<span class="asterisk"> *</span>{% endif %}
-          </label>
         {% endif %}
 
         {% if field|is_checkboxselectmultiple %}
           {% include 'materialize/layout/checkboxselectmultiple.html' %}
         {% endif %}
 
-        {% if not field|is_checkbox and not field|is_checkboxselectmultiple and not field|is_file %}
+        {% if not field|is_checkboxselectmultiple and not field|is_file %}
           {% crispy_field field %}
+        {% endif %}
+        {% if field.label and not field|is_file %}
+          <label for="{{ field.id_for_label }}" {% if field.field.required %}class="required"{% endif %}>
+              {{ field.label|safe }}{% if field.field.required %}<span class="asterisk"> *</span>{% endif %}
+          </label>
         {% endif %}
 
         {% if form_show_errors %}
