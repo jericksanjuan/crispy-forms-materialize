@@ -129,6 +129,7 @@ class FileField(Field):
 
     template = "{0}/field.file.html".format(TEMPLATE_PACK)
 
+
 class MultiField(crispy_forms_layout.MultiField):
     """
     MultiField container. Renders to a MultiField
@@ -158,11 +159,11 @@ class InlineField(Field):
     """
     template = "{0}/layout/inline_field.html".format(TEMPLATE_PACK)
 
-    def __init__(self, field, label_column='large-3', input_column='large-9',
+    def __init__(self, field, label_column='s3', input_column='s9',
                  label_class='', *args, **kwargs):
         self.field = field
-        self.label_column = label_column+' columns'
-        self.input_column = input_column+' columns'
+        self.label_column = label_column+' col'
+        self.input_column = input_column+' col'
         self.label_class = label_class
 
         super(InlineField, self).__init__(field, *args, **kwargs)
@@ -194,6 +195,9 @@ class Button(crispy_forms_layout.Button):
     input_type = 'button'
     field_classes = 'btn waves-effect waves-light'
 
+    def __init__(self, *args, **kwargs):
+        super(crispy_forms_layout.Button, self).__init__(*args, **kwargs)
+
 
 class Submit(crispy_forms_layout.Submit):
     """
@@ -208,6 +212,9 @@ class Submit(crispy_forms_layout.Submit):
     """
     input_type = 'submit'
     field_classes = 'btn waves-effect waves-light'
+
+    def __init__(self, *args, **kwargs):
+        super(crispy_forms_layout.Submit, self).__init__(*args, **kwargs)
 
 
 class Hidden(crispy_forms_layout.Hidden):
